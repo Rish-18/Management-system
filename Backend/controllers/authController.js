@@ -1,8 +1,7 @@
 const Auth = require('../models/auth');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken'); // For generating JWT tokens
+const jwt = require('jsonwebtoken'); 
 
-// Register a new user
 const register = (req, res) => {
     const { username, password, role } = req.body;
     if (!username || !password || !role) {
@@ -17,10 +16,11 @@ const register = (req, res) => {
           .then(() => res.status(201).json({ message: 'User registered successfully' }))
           .catch(err => res.status(500).json({ message: 'Error registering user', error: err }));
       })
-      .catch(err => res.status(500).json({ message: 'Error checking user existence', error: err }));
+      .catch(err => {
+        console.log('Error checking user existence:', err); 
+        res.status(500).json({ message: 'Error checking user existence', error: err })});
   };
 
-// Login a user
 const login = (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) {
@@ -34,10 +34,10 @@ const login = (req, res) => {
                 if (err) return res.status(500).json({ message: 'Error comparing passwords' });
                 if (!result) return res.status(401).json({ message: 'Invalid credentials' });
 
-                // Generate JWT token
                 const token = jwt.sign({ id: user._id, role: user.role }, 'your_secret_key', { expiresIn: '1h' });
 
-                res.json({ message: 'Login successful', token });
+                res.json({ message: 'Login successful', token , role: user.role 
+                });
             });
         })
         .catch((err) => res.status(500).json({ message: 'Error logging in', error: err }));

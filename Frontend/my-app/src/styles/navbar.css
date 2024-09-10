@@ -1,0 +1,52 @@
+
+.navbar {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0;
+  }
+  
+  .navbar-toggler {
+    border-color: #007bff;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fff' stroke-width='2' d='M5 6h20M5 14h20M5 22h20'/%3E%3C/svg%3E");
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 425px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 5px 0;
+    }
+  
+    .navbar-toggler {
+      border-color: #007bff;
+    }
+  
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fff' stroke-width='2' d='M5 6h20M5 14h20M5 22h20'/%3E%3C/svg%3E");
+    }
+  }
+  

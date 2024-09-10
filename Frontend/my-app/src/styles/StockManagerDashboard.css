@@ -1,0 +1,91 @@
+
+.stockmanager {
+    padding: 20px;
+  }
+  
+  .stockmanager .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .stockmanager h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .stockmanager table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .stockmanager table, .stockmanager th, .stockmanager td {
+    border: 1px solid #ddd;
+  }
+  
+  .stockmanager th, .stockmanager td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .stockmanager th {
+    background-color: #f4f4f4;
+  }
+  
+  .stockmanager tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .stockmanager input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .stockmanager button {
+    padding: 8px 16px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px; 
+    display: inline-block; 
+  }
+  
+  .stockmanager button.save {
+    background-color: #007bff; 
+  }
+  
+  .stockmanager button.save:hover {
+    background-color: #0056b3; 
+  }
+  
+  .stockmanager button.delete {
+    background-color: #dc3545; 
+  }
+  
+  .stockmanager button.delete:hover {
+    background-color: #c82333; 
+  }
+  
+  @media (max-width: 425px) {
+    .stockmanager table {
+      font-size: 12px;
+    }
+  
+    .stockmanager th, .stockmanager td {
+      padding: 6px;
+    }
+  
+    .stockmanager input[type="number"] {
+      font-size: 12px;
+    }
+  
+    .stockmanager button {
+      font-size: 12px;
+      padding: 6px 12px;
+      margin-right: 5px; 
+    }
+  }
+  

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt'); // For hashing passwords
+const bcrypt = require('bcrypt'); 
 
 const AuthSchema = new mongoose.Schema({
     username: {
@@ -18,7 +18,6 @@ const AuthSchema = new mongoose.Schema({
     },
 });
 
-// Hash password before saving the user
 AuthSchema.pre('save', function (next) {
     const user = this;
     if (!user.isModified('password')) return next();
@@ -30,4 +29,4 @@ AuthSchema.pre('save', function (next) {
     });
 });
 
-module.exports = mongoose.model('Auth', AuthSchema); // 'Auth' is the name of the model
+module.exports = mongoose.model('Auth', AuthSchema); 

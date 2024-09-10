@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/auth'); // Adjust path as needed
+const User = require('../models/auth'); 
 
 const authorizeRole = (...allowedRoles) => {
   return (req, res, next) => {
@@ -9,7 +9,7 @@ const authorizeRole = (...allowedRoles) => {
       return res.status(401).json({ success: false, message: 'No token provided.' });
     }
 
-    jwt.verify(token, 'your_secret_key', (err, decoded) => { // Use your secret key here
+    jwt.verify(token, 'your_secret_key', (err, decoded) => { 
       if (err) {
         return res.status(401).json({ success: false, message: 'Invalid token.' });
       }
@@ -20,8 +20,8 @@ const authorizeRole = (...allowedRoles) => {
             return res.status(403).json({ success: false, message: 'Access Denied. Unauthorized role.' });
           }
 
-          req.user = user; // Add user to request object
-          next(); // Proceed to the next middleware or route handler
+          req.user = user; 
+          next();
         })
         .catch(() => res.status(500).json({ success: false, message: 'Internal Server Error.' }));
     });

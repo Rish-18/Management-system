@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const userControllers = require('../controllers/userController'); // Ensure this path is correct
-const authMiddleware = require('../middlewares/authMiddleware'); // Ensure this path is correct
-const authorizeRole = require('../middlewares/authorizeRole'); // Combined role checking middleware
+const userControllers = require('../controllers/userController'); 
+const authMiddleware = require('../middlewares/authMiddleware'); 
+const authorizeRole = require('../middlewares/authorizeRole'); 
 
-// Add a new user (Admin only)
-router.post('users/add', authMiddleware, authorizeRole('Admin'), userControllers.addUser);
 
-// Delete a user (Admin only)
-router.delete('users/delete/:id', authMiddleware, authorizeRole('Admin'), userControllers.deleteUser);
+router.post('/users/add', authMiddleware, authorizeRole('Admin'), userControllers.addUser); 
+router.delete('/users/delete/:id', authMiddleware, authorizeRole('Admin'), userControllers.deleteUser);
+
+router.get('/users', authMiddleware, authorizeRole('Admin'), userControllers.getUsers);
 
 module.exports = router;

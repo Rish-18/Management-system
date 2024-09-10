@@ -1,7 +1,6 @@
 const productModel = require("../models/product");
 const mongoose = require("mongoose");
 
-// Get all products
 const allProducts = (req, res) => {
   productModel
     .find()
@@ -12,7 +11,6 @@ const allProducts = (req, res) => {
     });
 };
 
-// Get product by ID
 const searchProduct = (req, res) => {
   productModel
     .findById(req.params.id)
@@ -23,7 +21,6 @@ const searchProduct = (req, res) => {
     });
 };
 
-// Add a new product
 const addProduct = (req, res) => {
   const { productName, description, price, stockQuantity, category } = req.body;
   if (!productName || !description || !price || !stockQuantity || !category) {
@@ -36,7 +33,6 @@ const addProduct = (req, res) => {
       .catch(err => res.status(500).json({ success: false, message: 'Error adding product', error: err.message }));
 };
 
-// Update a product
 const updateProduct = (req, res) => {
   const { productName, description, price, stockQuantity, category } = req.body;
   if (!productName && !description && !price && !stockQuantity && !category) {
@@ -48,7 +44,6 @@ const updateProduct = (req, res) => {
       .catch(err => res.status(500).json({ success: false, message: 'Error updating product', error: err.message }));
 };
 
-// Delete a product
 const deleteProduct = (req, res) => {
   productModel.deleteOne({ _id: req.params.id })
       .then(() => res.json({ success: true, message: 'Product deleted' }))

@@ -1,0 +1,47 @@
+.userdashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.userdashboard h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.userdashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.userdashboard table, 
+.userdashboard th, 
+.userdashboard td {
+  border: 1px solid #ddd;
+}
+
+.userdashboard th, 
+.userdashboard td {
+  padding: 10px;
+  text-align: left;
+}
+
+.userdashboard th {
+  background-color: #f4f4f4;
+}
+
+.userdashboard tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 425px) {
+  .userdashboard table {
+    font-size: 12px;
+  }
+
+  .userdashboard th, 
+  .userdashboard td {
+    padding: 6px;
+  }
+}

@@ -1,0 +1,99 @@
+
+.adminDashboard {
+    padding: 20px;
+  }
+  
+  .adminDashboard .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .adminDashboard h1,
+  .adminDashboard h2,
+  .adminDashboard h3 {
+    color: #333;
+  }
+  
+  /* Products Table */
+  .adminDashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .adminDashboard table, .adminDashboard th, .adminDashboard td {
+    border: 1px solid #ddd;
+  }
+  
+  .adminDashboard th, .adminDashboard td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .adminDashboard th {
+    background-color: #f4f4f4;
+  }
+  
+  .adminDashboard tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Users Section */
+  .adminDashboard input[type="text"],
+  .adminDashboard input[type="password"],
+  .adminDashboard select {
+    padding: 6px;
+    margin: 5px 5px 5px 0;
+    width: 20%;
+    box-sizing: border-box;
+  }
+  
+  .adminDashboard button {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px; 
+    display: inline-block; 
+  }
+  
+  .adminDashboard button.addUser {
+    background-color: #007bff;
+  }
+  
+  .adminDashboard button.addUser:hover {
+    background-color: #0056b3; 
+  }
+  
+  .adminDashboard button.deleteUser {
+    background-color: #dc3545; 
+  }
+  
+  .adminDashboard button.deleteUser:hover {
+    background-color: #c82333; 
+  }
+  
+  @media (max-width: 425px) {
+    .adminDashboard table {
+      font-size: 12px;
+    }
+  
+    .adminDashboard th, .adminDashboard td {
+      padding: 4px;
+    }
+  
+    .adminDashboard input[type="text"],
+    .adminDashboard input[type="password"],
+    .adminDashboard select {
+      font-size: 12px;
+    }
+  
+    .adminDashboard button {
+      font-size: 12px;
+      padding: 6px 12px;
+      margin-right: 5px; 
+    }
+  }
+  
